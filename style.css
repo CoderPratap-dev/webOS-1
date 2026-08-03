@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111111;
+    color: white;
+    overflow: hidden;
+}
+
+.desktop {
+    width: 100vw;
+    height: 100vh;
+    background: #111111;
+}
+
+/* Top bar */
+
+.top-bar {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px;
+
+    background: #181818;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.os-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.system-info {
+    display: flex;
+    gap: 18px;
+    font-size: 13px;
+    color: #bbbbbb;
+}
+
+/* Main desktop */
+
+.workspace {
+    height: calc(100vh - 95px);
+    position: relative;
+}
+
+/* Welcome message */
+
+.welcome {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+
+.welcome h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    color: #999999;
+}
+
+/* Desktop icons */
+
+.desktop-icons {
+    position: absolute;
+    top: 30px;
+    left: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.desktop-icon {
+    width: 70px;
+
+    text-align: center;
+    cursor: pointer;
+}
+
+.icon {
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.desktop-icon span {
+    font-size: 13px;
+    color: #dddddd;
+}
+
+/* Taskbar */
+
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 15px;
+
+    background: #181818;
+    border-top: 1px solid #2a2a2a;
+}
+
+.start-button {
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #333333;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+.taskbar-apps {
+    display: flex;
+    gap: 8px;
+    margin-left: 12px;
+}
+
+.taskbar-apps button {
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #292929;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 17px;
+}
+
+button:hover {
+    background: #3a3a3a;
+}
+
+.desktop-icon:hover {
+    opacity: 0.7;
+}
+
+/* App window */
+
+.app-window {
+    display: none;
+
+    position: absolute;
+
+    top: 20%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 450px;
+
+    background: #202020;
+
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.window-header {
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 12px;
+
+    background: #292929;
+
+    border-bottom: 1px solid #3a3a3a;
+}
+
+.window-header button {
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+.window-content {
+    padding: 25px;
+}
+
+.window-content h2 {
+    margin-bottom: 10px;
+}
+
+.window-content p {
+    color: #aaaaaa;
+}
+
+#notes-window {
+    width: 450px;
+}
+
+#notes-text {
+    width: 100%;
+    height: 180px;
+
+    margin-top: 15px;
+
+    padding: 10px;
+
+    background: #151515;
+    color: white;
+
+    border: 1px solid #3a3a3a;
+    border-radius: 5px;
+
+    resize: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+#notes-text:focus {
+    outline: none;
+    border-color: #555555;
+}
