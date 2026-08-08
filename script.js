@@ -159,3 +159,65 @@ taskSettings.addEventListener("click", function() {
     settingsWindow.style.display = "block";
 
 });
+
+/* -------------------------
+   Start Menu
+------------------------- */
+
+const startButton =
+    document.getElementById("start-button");
+
+const startMenu =
+    document.getElementById("start-menu");
+
+
+startButton.addEventListener("click", function() {
+
+    if (startMenu.style.display === "block") {
+
+        startMenu.style.display = "none";
+
+    } else {
+
+        startMenu.style.display = "block";
+
+    }
+
+});
+
+
+const menuFiles =
+    document.getElementById("menu-files");
+
+const menuNotes =
+    document.getElementById("menu-notes");
+
+const menuSettings =
+    document.getElementById("menu-settings");
+
+
+menuFiles.addEventListener("click", function() {
+
+    filesWindow.style.display = "block";
+
+    startMenu.style.display = "none";
+
+});
+
+
+menuNotes.addEventListener("click", function() {
+
+    notesWindow.style.display = "block";
+
+    startMenu.style.display = "none";
+
+});
+
+
+menuSettings.addEventListener("click", function() {
+
+    settingsWindow.style.display = "block";
+
+    startMenu.style.display = "none";
+
+});

@@ -1,183 +1,143 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>NOVA OS</title>
 
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-
+  <body>
     <div class="desktop">
+      <!-- Top bar -->
+      <header class="top-bar">
+        <div class="os-name">NOVA OS</div>
+
+        <div class="system-info">
+          <span>Wi-Fi</span>
+          <span>🔊</span>
+          <span id="clock">00:00</span>
+        </div>
+      </header>
 
-        <!-- Top bar -->
-        <header class="top-bar">
+      <!-- Desktop -->
+      <main class="workspace">
+        <!-- Welcome message -->
+        <div class="welcome">
+          <h1>NOVA OS</h1>
 
-            <div class="os-name">
-                NOVA OS
-            </div>
+          <p>A simple web-based desktop</p>
+        </div>
 
-            <div class="system-info">
-                <span>Wi-Fi</span>
-                <span>🔊</span>
-                <span id="clock">00:00</span>
-            </div>
+        <!-- Desktop icons -->
+        <div class="desktop-icons">
+          <!-- Files -->
+          <div class="desktop-icon">
+            <div class="icon">📁</div>
 
-        </header>
+            <span>Files</span>
+          </div>
 
+          <!-- Notes -->
+          <div class="desktop-icon">
+            <div class="icon">📝</div>
 
-        <!-- Desktop -->
-        <main class="workspace">
+            <span>Notes</span>
+          </div>
 
-            <!-- Welcome message -->
-            <div class="welcome">
+          <!-- Settings -->
+          <div class="desktop-icon">
+            <div class="icon">⚙️</div>
 
-                <h1>NOVA OS</h1>
+            <span>Settings</span>
+          </div>
+        </div>
 
-                <p>A simple web-based desktop</p>
+        <!-- Files window -->
+        <div class="app-window" id="files-window">
+          <div class="window-header">
+            <span>Files</span>
 
-            </div>
+            <button id="close-files">×</button>
+          </div>
 
+          <div class="window-content">
+            <h2>My Files</h2>
 
-            <!-- Desktop icons -->
-            <div class="desktop-icons">
+            <p>There are no files here yet.</p>
+          </div>
+        </div>
 
-                <!-- Files -->
-                <div class="desktop-icon">
+        <!-- Notes window -->
+        <div class="app-window" id="notes-window">
+          <div class="window-header">
+            <span>Notes</span>
 
-                    <div class="icon">📁</div>
+            <button id="close-notes">×</button>
+          </div>
 
-                    <span>Files</span>
+          <div class="window-content">
+            <h2>Quick Notes</h2>
 
-                </div>
+            <textarea
+              id="notes-text"
+              placeholder="Write something..."
+            ></textarea>
+          </div>
+        </div>
 
+        <!-- Settings window -->
+        <div class="app-window" id="settings-window">
+          <div class="window-header">
+            <span>Settings</span>
 
-                <!-- Notes -->
-                <div class="desktop-icon">
+            <button id="close-settings">×</button>
+          </div>
 
-                    <div class="icon">📝</div>
+          <div class="window-content">
+            <h2>Settings</h2>
 
-                    <span>Notes</span>
+            <p>System: NOVA OS</p>
 
-                </div>
+            <p>Version: 1.0</p>
 
+            <p>Status: Running</p>
+          </div>
+        </div>
+      </main>
 
-                <!-- Settings -->
-                <div class="desktop-icon">
+      <!-- Taskbar -->
+      <footer class="taskbar">
+        <div class="start-container">
+          <button class="start-button" id="start-button">◉</button>
 
-                    <div class="icon">⚙️</div>
+          <div class="start-menu" id="start-menu">
+            <div class="start-title">NOVA OS</div>
 
-                    <span>Settings</span>
+            <button id="menu-files">📁 Files</button>
 
-                </div>
+            <button id="menu-notes">📝 Notes</button>
 
-            </div>
+            <button id="menu-settings">⚙️ Settings</button>
 
+            <div class="menu-divider"></div>
 
-            <!-- Files window -->
-            <div class="app-window" id="files-window">
+            <div class="about-text">NOVA OS 1.0</div>
+          </div>
+        </div>
 
-                <div class="window-header">
+        <div class="taskbar-apps">
+          <button id="task-files">📁</button>
 
-                    <span>Files</span>
+          <button id="task-notes">📝</button>
 
-                    <button id="close-files">×</button>
-
-                </div>
-
-                <div class="window-content">
-
-                    <h2>My Files</h2>
-
-                    <p>There are no files here yet.</p>
-
-                </div>
-
-            </div>
-
-
-            <!-- Notes window -->
-            <div class="app-window" id="notes-window">
-
-                <div class="window-header">
-
-                    <span>Notes</span>
-
-                    <button id="close-notes">×</button>
-
-                </div>
-
-                <div class="window-content">
-
-                    <h2>Quick Notes</h2>
-
-                    <textarea
-                        id="notes-text"
-                        placeholder="Write something..."
-                    ></textarea>
-
-                </div>
-
-            </div>
-
-
-            <!-- Settings window -->
-            <div class="app-window" id="settings-window">
-
-                <div class="window-header">
-
-                    <span>Settings</span>
-
-                    <button id="close-settings">×</button>
-
-                </div>
-
-                <div class="window-content">
-
-                    <h2>Settings</h2>
-
-                    <p>System: NOVA OS</p>
-
-                    <p>Version: 1.0</p>
-
-                    <p>Status: Running</p>
-
-                </div>
-
-            </div>
-
-        </main>
-
-
-        <!-- Taskbar -->
-        <footer class="taskbar">
-
-            <button class="start-button">
-                ◉
-            </button>
-
-
-            <div class="taskbar-apps">
-
-                <button id="task-files">📁</button>
-
-                <button id="task-notes">📝</button>
-
-                <button id="task-settings">⚙️</button>
-
-            </div>
-
-        </footer>
-
+          <button id="task-settings">⚙️</button>
+        </div>
+      </footer>
     </div>
 
-
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>

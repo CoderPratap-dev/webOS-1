@@ -355,3 +355,88 @@ body {
 .taskbar-apps button:hover {
     background: #3a3a3a;
 }
+
+/* -------------------------
+   Start Menu
+------------------------- */
+
+.start-container {
+    position: relative;
+}
+
+
+.start-menu {
+    display: none;
+
+    position: absolute;
+
+    bottom: 48px;
+    left: 0;
+
+    width: 220px;
+
+    padding: 10px;
+
+    background: #202020;
+
+    border: 1px solid #3a3a3a;
+
+    border-radius: 8px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+.start-title {
+    padding: 10px;
+
+    font-weight: bold;
+
+    border-bottom: 1px solid #333333;
+
+    margin-bottom: 6px;
+}
+
+
+.start-menu button {
+    width: 100%;
+
+    padding: 10px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    text-align: left;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+.start-menu button:hover {
+    background: #333333;
+}
+
+
+.menu-divider {
+    height: 1px;
+
+    background: #333333;
+
+    margin: 6px 0;
+}
+
+
+.about-text {
+    padding: 8px 10px;
+
+    color: #888888;
+
+    font-size: 12px;
+}
