@@ -221,3 +221,79 @@ menuSettings.addEventListener("click", function() {
     startMenu.style.display = "none";
 
 });
+
+const windows = document.querySelectorAll(".app-window");
+
+windows.forEach(function(windowElement) {
+
+    const header = windowElement.querySelector(".window-header");
+
+    let isDragging = false;
+
+    let offsetX = 0;
+    let offsetY = 0;
+
+
+    header.addEventListener("mousedown", function(event) {
+
+        if (event.target.tagName === "BUTTON") {
+            return;
+        }
+
+        isDragging = true;
+
+        const rect = windowElement.getBoundingClientRect();
+
+        offsetX = event.clientX - rect.left;
+        offsetY = event.clientY - rect.top;
+
+        windowElement.style.transform = "none";
+
+    });
+
+
+    document.addEventListener("mousemove", function(event) {
+
+        if (!isDragging) {
+            return;
+        }
+
+        windowElement.style.left =
+            (event.clientX - offsetX) + "px";
+
+        windowElement.style.top =
+            (event.clientY - offsetY) + "px";
+
+    });
+
+
+    document.addEventListener("mouseup", function() {
+
+        isDragging = false;
+
+    });
+
+});
+
+/* -------------------------
+   Notes Auto Save
+------------------------- */
+
+const notesText = document.getElementById("notes-text");
+
+
+const savedNotes = localStorage.getItem("nova-notes");
+
+if (savedNotes !== null) {
+    notesText.value = savedNotes;
+}
+
+
+notesText.addEventListener("input", function() {
+
+    localStorage.setItem(
+        "nova-notes",
+        notesText.value
+    );
+
+});

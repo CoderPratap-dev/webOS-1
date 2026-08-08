@@ -440,3 +440,11 @@ body {
 
     font-size: 12px;
 }
+
+.window-header {
+    cursor: move;
+}
+
+.window-header button {
+    cursor: pointer;
+}
